@@ -23,7 +23,7 @@ public class AnalyzeWeatherTest {
         uniqueTemp.addAll(AnalyzeWeather.getHash(weeklyMonthTemperatures));
 
         HashSet<Integer> missingTemp = new HashSet<>();
-        uniqueTemp.addAll(AnalyzeWeather.getMissingTemp(uniqueTemp));
+        missingTemp.addAll(AnalyzeWeather.getMissingTemp(uniqueTemp));
 
 
         int minValue = Collections.min(uniqueTemp);

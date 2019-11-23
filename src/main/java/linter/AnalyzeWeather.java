@@ -23,13 +23,18 @@ public class AnalyzeWeather {
         List<Integer> missingTemp = new ArrayList<>();
         int minValue = Collections.min(octoberTemp);
         int maxValue = Collections.max(octoberTemp);
-        for(int i = minValue; i <= maxValue ; i++ )
-            if (octoberTemp.contains(minValue)){
+        //System.out.println(minValue + " " + maxValue);
+        //System.out.println(octoberTemp);
+        for(int i = minValue; i <= maxValue ; i++ ){
+           // System.out.println(octoberTemp.contains(i));
+            if (octoberTemp.contains(i)) {
 
             } else {
-                missingTemp.add(minValue);
+                missingTemp.add(i);
 
             }
+        }
+        //System.out.println(missingTemp);
         return missingTemp;
     }
 
